@@ -314,9 +314,8 @@ footer {
   height: 45px;
   background-color: black;
   color: white;
-  border: 1px solid #C0C0C0;
   cursor: pointer;
-  font-size: 1.8rem;
+  font-size: 2.8rem;
 }
 .home .walk .walk-img {
   width: 46%;

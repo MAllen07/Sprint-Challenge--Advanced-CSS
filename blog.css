@@ -6,7 +6,7 @@
   body {
     font-family: Arial;
     padding: 20px;
-    background: #f1f1f1;
+    background: white;
   }
   
   /* Header/Blog Title */
@@ -19,15 +19,35 @@
 
   /* Create two unequal columns that floats next to each other */
 /* Left column */
-.leftcolumn {   
+.column {
     float: left;
-    width: 75%;
+    width: 50%;
+    padding: 5px;
   }
+
   
-  /* Right column */
-  .rightcolumn {
-    float: left;
-    width: 25%;
-    padding-left: 20px;
+
+  
+
+// Responsive Layout
+
+@phone screen and (max-width: 500px) {
+    .leftcolumn, .rightcolumn {   
+      width: 100%;
+      padding: 0;
+    }
   }
-  
+
+  /* Footer */
+ 
+  .footer {
+  color: #22283B;
+  background: #f4f4f4;
+  padding: 20px 0;
+  border: 1px double #e0e0e0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

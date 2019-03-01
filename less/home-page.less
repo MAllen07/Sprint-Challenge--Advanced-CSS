@@ -1,90 +1,190 @@
-// Home Content
-
 .home {
+	.margin-top(104px);
 
-  .intro {
+	.intro {
+		h2 {
+			padding: 15px;
+			.slide(slideFromRight, 1.2s);
+		}
 
-    h2 {
-      padding: 15px;
+		p {
+			padding:0 15px;
+			.slide(slideFromRight, 1.5s);
+		}
+		
+		img {
+			.width();
+			border-radius: 8px;
+			.slide(slideFromLeft, 1s);
+		}
+	}
+
+	.space-images {
+		display: flex;
+		flex-wrap: wrap;
+		.width();
+
+		img {
+			.width(28%);
+			margin: 20px 2.5%;
+			border-radius: 20px;
+			height: 100%;
+			&:hover {
+				.zoom(1s);
+			}
+				
+			
+			@media screen and @phone {
+				.width(100%);
+				margin: 0 24px;
+				&:not(:first-child) {
+					display: none;
+				}
+			}
+
+			&:first-child {
+				.slide(slideFromLeft, 2.5s);
+			}
+
+			&:nth-child(2) {
+				.slide(slideFromLeft, 3s);
+			}
+
+			&:last-child {
+				.slide(slideFromRight, 2.8s);
+			}
+		}
+
+		@media screen and @phone {
+			margin-top: 16px;
+		}
+	}
+
+	.visit-planets {
+		padding: 15px;
+
+		h3 {
+			.margin-top(11px);
+			.slide(slideFromRight, 3.5s);
+		}
+
+		p {
+			.margin-top(13px);
+			.slide(slideFromRight, 3.8s);
+		}
+	}
+
+	.walk {
+		.margin-top(60px);
+		border-top: 1px solid @main-border-color;
+		padding: 50px 60px;
+		display: flex;
+		justify-content: center;
+
+		.walk-text {
+			.width(50%);
+
+			h3 {
+				margin-bottom: 10px;
+				.slide(slideFromLeft, 4.5s);
+
+				@media screen and @phone {
+					margin-top: 24px;
+				}
+			}
+
+			p {
+				margin-bottom: 26px;
+				.slide(slideFromLeft, 5s);
+			}
+
+			// .btn {
+			// 	.btn-gen(rgb(34, 40, 58), @white);
+			// 	.slide(slideFromRight, 5.2s);
+			// }
+
+			@media screen and @phone {
+				width: 100%;
+			}
+    }
+    
+    .walk .btn{
+      width: 30%;
+      margin-bottom: 30px;
+      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 200px;
+      height: 45px;
+      background-color: black;
+      color: white;
+      border: 1px solid #C0C0C0;
+      cursor: pointer;
+      font-size: 1.8rem;
     }
 
-    p {
-      padding:0 15px;
-    }
-  
-  }
+		.walk-img {
+			.width(46%);
+			margin-left: 4%;
+			.slide(slideFromRight, 5.5s);
+			
+			img {
+				.width(100%);
+				height: auto;
+				border-radius: 10px;
+			}
+			@media screen and @phone {
+				.width(100%);
+				margin: 0;
+			}
+		}
 
+		@media screen and @phone {
+			flex-direction: column-reverse;
+			padding: 50px 24px 24px;
+		}
+	}
 
-  .space-images {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
+	.contact-form {
+		border-top: 1px solid @main-border-color;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		margin: 0 auto;
+		margin-bottom: 50px;
 
-    img {
-      width: 28%;
-      margin: 20px 2.5%;
-      border-radius: 20px;
-      height: 100%;
-    }
-  }
+		.subscribe {
+			width: 90%;
+			margin: 50px auto 0;
 
-  .visit-planets {
-    padding: 15px;
+			h3 {
+				margin-bottom: 24px;
+				.slide(slideFromRight, 5.8s);
+			}
 
-    h3 {
-      margin-top: 11px;
-    }
+			label {
+				font-size: 1.6rem;
+				.slide(slideFromLeft, 6s);
+			}
 
-    p {
-      margin-top: 13px;
-    }
-  }
+			input[type=text], input[type=email] {
+				box-sizing: border-box;
+				font-size: 1.6rem;
+				width: 100%;
+				padding: 10px;
+				border: 1px solid black;
+				border-radius: 6px;
+				margin: 10px 0;
+				resize: vertical;
+				.slide(slideFromRight, 6.5s);
+			}
 
-  .walk {
-    margin-top: 60px;
-    border-top: 1px solid @main-border-color;
-    padding: 50px 60px;
-    display: flex;
-    justify-content: center;
-
-    .walk-text {
-      width: 50%;
-
-      h3 {
-        margin-bottom: 10px;
-      }
-
-      p {
-        margin-bottom: 26px;
-      }
-
-      .walk .btn {
-          width: 30%;
-          margin-bottom: 30px;
-          border-radius: 15px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 200px;
-          height: 45px;
-          background-color: black;
-          color:white;
-          border: 1px solid #C0C0C0;
-          cursor: pointer;
-          font-size: 1.8rem;
-        
-      }
-    }
-
-    .walk-img {
-      width: 46%;
-      margin-left: 4%;
-      
-      img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-      }
-    }
-  }
+			input[type=submit] {
+				.btn-gen(rgb(34, 40, 58), @white);
+				cursor: pointer;
+				.slide(slideFromLeft, 6.8s);
+			}
+		}
+	}
 }// home
