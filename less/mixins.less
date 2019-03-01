@@ -1,1 +1,78 @@
 // Mixins Here
+.btn-gen(@color, @txtcolor) {
+	background: @color;
+	color: @txtcolor;
+	font-size: 18px;
+	text-align: center;
+	border-radius: 8px;
+	padding: 10px 20px;
+	width: 120px;
+	max-width: 120px;
+
+	&:hover {
+		background: white;
+		color: black;
+		border: 1px solid red;
+	}
+
+	@media screen and @phone {
+		width: 100%;
+		max-width: 100%;
+		padding: 32px;
+	}
+}
+
+.width(@width: 100%) {
+	width: @width;
+}
+
+.margin-top(@mt: 0) {
+	margin-top: @mt;
+}
+
+.keyframes(@name, @rules) {
+	@keyframes @name {
+		@rules();
+	}
+}
+
+.keyframes(slideFromLeft, {
+    0% {
+        transform: translateX(-6000px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+});
+
+.keyframes(slideFromRight, {
+    0% {
+        transform: translateX(6000px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+});
+
+.keyframes(zoom, {
+	0% {
+		transform: scale(1);
+	}
+
+	100% {
+		transform: scale(1.2);
+	}
+});
+
+.zoom(@time){
+	animation: zoom @time forwards;
+}
+
+.slide(@direction, @time, @delay: 0) {
+    animation: @direction @time forwards;
+    animation-delay: @delay;
+}
