@@ -1,0 +1,27 @@
+
+
+
+1. What is the difference between an adaptive website and a fully responsive website?
+
+Adative:
+detects the device and other features, and then provides the appropriate feature and layout based 
+on a predefined set of viewport sizes and other characteristics
+
+responsive:
+ Web design that makes web pages render  well on a variety of devices and window or screen sizes
+
+2. Describe what it means to be mobile first vs desktop first.
+
+Mobile First:
+Deasigning for tablets and mobile devices
+
+Desktop First:
+Designing for full screen
+
+3. What does `font-size: 62.5%` in the `html` tag do for us when using `rem` units?
+
+4. How would you describe preprocessing to someone new to CSS?
+It allows you to generate css from the processors own syntax (Less)
+
+5. What is your favorite concept in preprocessing? What is the concept that gives you the most trouble?
+learning how to do the different variables makes it easier when on one line

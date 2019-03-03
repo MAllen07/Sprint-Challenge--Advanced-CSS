@@ -1,1 +1,68 @@
 // Navigation code here
+.navigation-bar {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 2;
+	padding-bottom: 12px;
+	border-bottom: 2px solid @nav-border;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0; 
+		left: 0;
+		width: 100%; 
+		height: 100%;  
+		opacity: .9; 
+		z-index: -1;
+		background: @nav-bg;
+	}
+
+	.nav-container {
+		display: flex;
+		flex-direction: column;
+		width: 70%;
+		max-width: 800px;
+		padding: 12px 0;
+		align-items: center;
+		justify-content: space-between;
+		align-self: center;
+		margin: 0 auto;
+
+		nav {
+			justify-content: space-between;
+			width: 80%;
+			display: flex;
+			a {
+				color: @nav-font;
+				text-decoration: none;
+				font-size: 16px;
+				
+				&:not(:first-child) {
+					margin: 0 0 0 6px;
+				}
+
+				@media screen and @phone {
+					font-size: 14px;
+					margin: 0;
+				}
+			}
+
+			@media screen and @phone {
+				width: 100%;
+			}
+		}
+		div {
+			width: 100%;
+			text-align: center;
+			margin-bottom: 18px;
+			a {
+				text-decoration: none;
+				color: @nav-font;
+				font-family: 'Russo One', sans-serif;
+				font-size: 32px;
+			}
+		}
+	}
+}
